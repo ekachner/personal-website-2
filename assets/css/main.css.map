@@ -4,6 +4,9 @@
     "sources": [
         "../sass/main.scss",
         "../sass/base/_reset.scss",
+        "../sass/abstracts/_variables.scss",
+        "../sass/abstracts/_placeholders.scss",
+        "../sass/abstracts/_mixins.scss",
         "../sass/themes/_theme.scss"
     ],
     "names": [],
