@@ -1,1 +1,13 @@
 // HOME
+
+.home {
+    background-color: $background;
+}
+
+.about-me {
+    background-color: $background;
+
+    .header {
+        padding: 20px;
+    }
+}

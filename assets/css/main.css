@@ -51,4 +51,68 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+a.navbar-item {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: #6fb0b9;
+  font-size: 25px;
+  letter-spacing: 3.31px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.header {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: #6fb0b9;
+  font-size: 50px;
+  letter-spacing: 3.31px;
+  text-align: center;
+}
+
+p {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: #6fb0b9;
+  font-size: 20px;
+  letter-spacing: 2.5px;
+}
+
+.footer {
+  color: #6fb0b9;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #0A2131;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: #0A2131;
+}
+
+.navbar .navbar-item img {
+  max-height: none;
+}
+
+.navbar-end .navbar-item {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  margin: 0 20px;
+}
+
+.navbar-end .navbar-item:last-child {
+  margin-right: 55px;
+}
+
+.home {
+  background-color: #0A2131;
+}
+
+.about-me {
+  background-color: #0A2131;
+}
+
+.about-me .header {
+  padding: 20px;
+}
 /*# sourceMappingURL=main.css.map */

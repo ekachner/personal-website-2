@@ -1,1 +1,34 @@
 // TYPOGRAPHY
+
+a.navbar-item {
+    font-family: $text;
+    color: rgb(111, 176, 185);
+    font-size: 25px;
+    letter-spacing: 3.31px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.header {
+    font-family: $text;
+    color: rgb(111, 176, 185);
+    font-size: 50px;
+    letter-spacing: 3.31px;
+    text-align: center;
+} 
+
+
+p {
+    font-family: $text;
+    color: rgb(111, 176, 185);
+    font-size: 20px;
+    letter-spacing: 2.5px;
+}
+
+
+
+.footer {
+    color: rgb(111, 176, 185);
+    font-size: 14px;
+    text-align: center;
+}
