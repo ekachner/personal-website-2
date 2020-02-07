@@ -2,5 +2,11 @@
 
 .footer {
     background-color: #0A2131;
-    padding: 20px;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+
+    img {
+        margin-right: 5px;
+    }
 }

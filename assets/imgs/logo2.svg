@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="249px" height="85px" viewBox="0 0 249 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="attempt2" transform="translate(-57.000000, -9.000000)" fill="#6FB0B9">
+            <g id="navbar" transform="translate(-42.000000, -56.000000)">
+                <g id="logo">
+                    <g id="face" transform="translate(273.000000, 75.000000)" opacity="0.998116629">
+                        <path d="M26.6032901,43 C41.2890989,43 57.8713867,31.5022416 53.1942991,30.0974348 C48.5172115,28.6926281 41.2890989,36.5347091 26.6032901,36.5347091 C11.9174813,36.5347091 -0.444757811,20.4119573 0.0122810366,30.0974348 C0.469319885,39.7829124 11.9174813,43 26.6032901,43 Z" id="smile-mouth"></path>
+                        <ellipse id="left-eye" cx="18" cy="10.5" rx="4" ry="10.5"></ellipse>
+                        <ellipse id="right-eye" cx="34" cy="11.5" rx="5" ry="9.5"></ellipse>
+                    </g>
+                    <text font-family="Sherlyn" font-size="72" font-weight="normal" line-spacing="21" letter-spacing="5.53846154">
+                        <tspan x="76.3159555" y="20.6875">Erica</tspan>
+                        <tspan x="267.238732" y="70" font-size="76" letter-spacing="5.84615385"></tspan>
+                        <tspan x="24.5857497" y="91" font-family="MyanmarMN, Myanmar MN" font-size="14" line-spacing="24" letter-spacing="1.07692308">                                web-design + textile artist</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

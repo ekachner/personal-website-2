@@ -1,13 +1,59 @@
 // HOME
 
+
 .home {
     background-color: $background;
 }
 
+
+
+
 .about-me {
     background-color: $background;
+    // display: flex;
 
-    .header {
-        padding: 20px;
-    }
-}
+    .card {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        background-color: $background;
+        
+        .header {
+            padding-top: 20px;
+            background-color: $background;
+        }
+
+        .columns {
+            
+            .column {
+                padding: 30px 50px;
+
+                
+                img {
+
+                    @include basic-flex(center, center, row);
+                    margin: 30px auto;
+                    width: fit-content;
+                    text-align: center;
+                    
+                }
+
+                p {
+                    padding: 20px;
+
+                    // &:first-child {
+                    //     padding-right: 50px;
+                    // }
+
+                    // &:last-child {
+                    //     padding-left: 50px;
+                    // }
+                }
+            }
+
+        } //columns
+
+    } //info-items
+
+    
+} //about-me
