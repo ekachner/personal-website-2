@@ -1,7 +1,6 @@
 // TYPOGRAPHY
 
 a.navbar-item {
-    font-family: $text;
     color: rgb(111, 176, 185);
     font-size: 25px;
     letter-spacing: 3.31px;
@@ -9,17 +8,34 @@ a.navbar-item {
     font-weight: bold;
 }
 
-.header {
-    font-family: $text;
-    color: rgb(111, 176, 185);
-    font-size: 50px;
-    letter-spacing: 3.31px;
-    text-align: center;
-} 
+// body {
+//     .about-me {
+//         .columns {
+//             .column {
+//                 h1 {
+//                     *, ::after, ::before {
+//                         box-sizing: inherit;
+//                         color: blue;
+//                     }
+//                     // font-family: $text;
+//                     // color: rgb(111, 176, 185);
+//                     // font-size: 50px;
+//                     // letter-spacing: 3.31px;
+//                     // text-align: center;
+//                 }
+//             } 
+//         }
+//     }
+// }
+
+h1.header {
+    color: $text-color;
+    font-size: 65px;
+}
+
 
 
 p {
-    font-family: $text;
     color: rgb(111, 176, 185);
     font-size: 20px;
     letter-spacing: 1.75px;
