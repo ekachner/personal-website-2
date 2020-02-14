@@ -100,12 +100,52 @@ p {
   max-height: none;
 }
 
+.navbar-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar-end a:hover {
+  background-color: #0A2131;
+  color: #6fb0b9;
+}
+
 .navbar-end .navbar-item {
   margin: 0 20px;
 }
 
 .navbar-end .navbar-item:last-child {
   margin-right: 55px;
+}
+
+.navbar-end .hover-underline-animation {
+  color: #6fb0b9;
+}
+
+.navbar-end .hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 85%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 3px;
+  bottom: 30px;
+  left: 9px;
+  background-color: #6fb0b9;
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+}
+
+.navbar-end .hover-underline-animation:first-child:after {
+  width: 78%;
+}
+
+.navbar-end .hover-underline-animation:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 h1.header {
@@ -118,6 +158,7 @@ figure.image {
 
 div.column {
   background-color: #0A2131;
+  width: 100%;
 }
 
 div.card {
@@ -126,5 +167,53 @@ div.card {
 
 div.home {
   background-color: #0A2131;
+}
+
+.section {
+  background-color: #0A2131;
+}
+
+.section div.container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section div.container .button {
+  background-color: #6fb0b9;
+  color: white;
+  border-radius: 5px;
+  font-family: "Times New Roman";
+}
+
+form label {
+  color: #6fb0b9;
+  font-size: 30px;
+}
+
+form .input {
+  font-size: 1.25rem;
+}
+
+form .centered-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section div.container .button {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.margin-r {
+  margin-left: 165px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -11,13 +11,47 @@
 }
 
 .navbar-end {
-    .navbar-item {
+    display: flex;
+
+    a:hover {
+        background-color: $background;
+        color: $text-color;
+    }
+
+    .navbar-item{
         margin: 0 20px;
+
 
         &:last-child {
             margin-right: 55px;
         }
+        
     }
+    
+    .hover-underline-animation{
+        color: $text-color;
+    }//hover settings
+            
+    .hover-underline-animation::after{
+        content:'';
+        position:absolute;
+        width:85%;
+        transform:scaleX(0);
+        height: 3px;
+        bottom: 30px;
+        left: 9px;
+        background-color: $text-color;
+        transition:transform 0.25s ease-in-out;
+    }//hover animation
+
+    .hover-underline-animation:first-child:after {
+        width:78%;
+    }
+            
+    .hover-underline-animation:hover::after{
+        transform:scaleX(1);
+    } //hover animation position
+
 }
 
     

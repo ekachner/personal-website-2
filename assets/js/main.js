@@ -10,21 +10,21 @@ function Navbar (props) {
 
 function Column (props) {
     const columnClass = props.columns ? 'columns' : 'column';
-    return <div className={columnClass + ' ' + props.colClass}>{props.children}</div>
+    return <div id={props.id} className={columnClass + ' ' + props.colClass}>{props.children}</div>
 }
 
 
 
 function Card (props) {
     return (
-        <div class="card is-shadowless is-2">
-            <div class="card-image">
-                <figure class="image is-128x128">
+        <div className="card is-shadowless is-2">
+            <div className="card-image">
+                <figure className="image is-128x128">
                     <img src={props.imgUrl} alt={props.altContent} />
                 </figure>
             </div>
-            <div class="card-content">
-                <p class="content">
+            <div className="card-content">
+                <p className="content">
                     {props.children}  
                 </p>
             </div>
@@ -32,13 +32,91 @@ function Card (props) {
     );
 }
 
+class ContactFormToggle extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showForm: false
+        };
+    }
+
+    toggleFormHandler(e) {
+        this.setState({showForm: !this.state.showForm});
+    }
+
+    render() {
+        const componentToShow = this.state.showForm ? <ContactForm /> : '';
+        const buttonToShow = this.state.showForm ? '' : <button className="button is-medium" onClick={this.toggleFormHandler.bind(this)}>Contact Me</button>
+        return (
+            <div id="contact" className="section">
+                <div className="container is-flex">
+                    {componentToShow}
+                    {buttonToShow}
+                </div>
+            </div>
+        );
+    }
+}
+
+class ContactForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            from: '',
+            message: ''
+        }
+    }
+
+    handleFromChange(event) {
+        this.setState({from: event.target.value});
+    }
+
+    handleMessageChange(event) {
+        this.setState({message: event.target.value});
+    }
+
+    render() {
+        return (
+            <form>
+                <div className="field is-horizontal margin-r">
+                    <div className="field-label">
+                        <label htmlFor="from">From:</label>
+                    </div>
+                    <div className="columns field-body">
+                        <div className="column is-three-fifths is-offset-onefield">
+                            <p className="control">
+                                <input className="input" type="text" name="from" placeholder="email" value={this.state.from} onChange={this.handleFromChange.bind(this)}/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="field is-horizontal margin-r">
+                    <div className="field-label">
+                        <label htmlFor="message">Message:</label>
+                    </div>
+                    <div className="columns field-body">
+                        <div className="column is-three-fifths is-offset-onefield">
+                            <p className="control">
+                                <textarea className="input is-normal textarea is-medium" name="message" placeholder="write your message here" onChange={this.handleMessageChange.bind(this)} value={this.state.message}></textarea>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                    <div className="control centered-button">
+                        <button className="button is-medium">Submit</button>
+                    </div>
+            </form>
+        )
+    }
+}
 
 
 ReactDOM.render(
     <React.Fragment>
         <Navbar navClass="navbar">
             <Navbar navClass="navbar-brand">
-                <Navbar navClass="is-hoverable">
+                <Navbar navClass="">
                     <Navbar navClass="logo">
                         <img src="assets/imgs/logo.png" width="290" height="99"/>
                     </Navbar>
@@ -46,26 +124,26 @@ ReactDOM.render(
             </Navbar>
             <Navbar navClass="navbar-menu">
                 <Navbar navClass="navbar-end">
-                    <a className="navbar-item" href="">Home</a>
-                    <a className="navbar-item" href="">About Me</a>
-                    <a className="navbar-item" href="">Contact</a>
-                    <a className="navbar-item" href="">Portfolio</a>
+                    <a className="navbar-item hover-underline-animation" href="#home">Home</a>
+                    <a className="navbar-item hover-underline-animation" href="#about-me">About Me</a>
+                    <a className="navbar-item hover-underline-animation" href="#contact">Contact</a>
+                    <a className="navbar-item hover-underline-animation" href="https://github.com/ekachner" target="_blank">Portfolio</a>
                 </Navbar>
             </Navbar>
         </Navbar>
 
-        <div className="home">
+        <div id="home" className="home">
             <img src="assets/imgs/home-hero.jpg"/>
         </div>
 
-        <Column colClass="about-me"> 
+        <Column id="about-me" colClass="about-me"> 
             <Column columns colClass="is-multiline">
                 <Column colClass="is-12 has-text-centered is-size-1">
-                    <h1 className="header">~  web-designer  ~  textile artist  ~  world traveller  ~</h1>
+                    <h1 className="header">~ web-designer ~ textile artist ~ world traveller ~</h1>
                 </Column>
                 <Column>
                     <Card imgUrl="assets/imgs/web-icon.png" altContent="Web Icon">
-                        <p>Web design satiates my desire to mix a profession that incorporates creativity with logic. My favorite part about web engineering is the sound of my keyboard clicking away as the image within my head slowly rounds into something malleable through a process of structuring a hypertext markup language, tweaking a cascading style sheet and wrestling with JavaScript. I tknow I need to take a break when my pointer finger fatigues from so much trackpad useage; which is what happens when I’m too lazy to plug my mouse in.</p>
+                        <p>Web design satiates my desire to mix a profession that incorporates creativity with logic. My favorite part about web engineering is the sound of my keyboard clicking away as the image within my head slowly rounds into something malleable through a process of structuring a hypertext markup language, tweaking a cascading style sheet and wrestling with JavaScript. I know I need to take a break when my pointer finger fatigues from so much trackpad useage; which is what happens when I’m too lazy to plug my mouse in.</p>
                     </Card>
                 </Column>
                 <Column>
@@ -80,8 +158,8 @@ ReactDOM.render(
                 </Column>
             </Column>
         </Column>
-
-        <div class="footer">
+        <ContactFormToggle />
+        <div className="footer">
             <img src="assets/imgs/copyright-icon2.svg"/>
             <p>Copyright 2020</p>
         </div>

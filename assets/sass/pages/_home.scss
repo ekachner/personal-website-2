@@ -1,6 +1,5 @@
 // HOME
 
-
 h1.header {
     padding: 10px;
 }
@@ -11,17 +10,9 @@ figure.image {
 }
 
 
-// p.content {
-//     height: auto; 
-// }
-
-
-// .card-content {
-//     margin: 10px 30px;
-// }
-
 div.column {
     background-color: $background;
+    width: 100%;
 
 }
 
@@ -33,16 +24,50 @@ div.home {
     background-color: $background;
 }
 
-// .is-multiline {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-
-// h1.header {
-//     display: flex;
+.section {
+    background-color: $background;
     
-// }
+    div.container {
+        justify-content: center;
+        flex-direction: column;
+        
+        .button {
+            background-color: $text-color;
+            color: white;
+            border-radius: 5px;
+            font-family: "Times New Roman";
+        }
+    }
+}
+
+form {
+    label{
+        color: $text-color;
+        font-size: 30px;
+    }
+
+    .input {
+        font-size: 1.25rem;
+    }
+
+    .centered-button {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.section div.container .button {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.margin-r {
+    margin-left: 165px;
+}
+
+
+
+
 
 
 
